@@ -4,6 +4,10 @@ Simple phantomjs script to generate a png image from [national geographic photo 
 
 Cool for use as daily wallpaper.
 
+## Example
+
+![Example](http://brovador.github.io/national-geographic-photo-of-the-day-to-image/background.png)
+
 ## Usage
 
 * Install [phantomjs](http://phantomjs.org/) using npm
