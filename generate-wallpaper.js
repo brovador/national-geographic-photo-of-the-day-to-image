@@ -33,5 +33,5 @@ page.open(url, function() {
 			}
 		}
 
-    }, 500);
+    }, 1000);
 });
