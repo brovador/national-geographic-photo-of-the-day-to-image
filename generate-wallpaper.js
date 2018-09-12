@@ -6,6 +6,14 @@ page.viewportSize = { width: 1920, height: 1080 }
 page.onError = function(msg, trace) {}
 page.open(url, function() {
     setTimeout(function() {
+		
+		page.evaluate(function(){
+			var showMore = document.querySelector(".show-more-button")
+			if (showMore) {
+				showMore.click()
+			}
+		})
+
 		var imageUrl = page.evaluate(function(){
 			var images = document.getElementsByTagName("source")[0].getAttribute("srcset").split(" ")
 			return images[images.length - 2]
@@ -33,5 +41,5 @@ page.open(url, function() {
 			}
 		}
 
-    }, 1000);
+    }, 1500);
 });
