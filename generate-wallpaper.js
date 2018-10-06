@@ -22,7 +22,11 @@ page.open(url, function() {
 			return document.getElementsByClassName("media__caption--title")[0].textContent
 		})
 		var photoText = page.evaluate(function(){
-			return document.getElementsByTagName("p")[0].textContent
+			var p = document.getElementsByTagName("p")[0]
+			if (p.getElementsByTagName("b").length) {
+				p.getElementsByTagName("b")[0].remove()
+			}
+			return p.textContent
 		})
 		
 		if (!imageUrl) {
